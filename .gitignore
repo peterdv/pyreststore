@@ -1,0 +1,45 @@
+# Project specific
+##################
+
+# Directory containing an isolated Python instance based on virtualenv
+/pyreststoreEnv
+
+# settings file may contain passwords
+# settings.py
+
+
+# Editor leftovers
+##################
+*~ 
+
+
+# Compiled source
+#################
+*.pyc
+*.com
+*.class
+*.dll
+*.exe
+*.o
+*.so
+
+
+# Packages
+##########
+# it's better to unpack these files and commit the raw source
+# git has its own built in compression methods
+*.7z
+*.dmg
+*.gz
+*.iso
+*.jar
+*.rar
+*.tar
+*.zip
+
+
+# Logs and databases
+####################
+*.log
+*.sql
+*.sqlite
