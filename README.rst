@@ -27,12 +27,14 @@ supporting modules are need to do any usefull work.
 To do any development or production I recommend that you use:
 
 #. An isolated Python environment based on 
-   "virtualenv":https://virtualenv.pypa.io/. 
+   virtualenv_. 
 
 #. A local 
-   Django:https://www.djangoproject.com/ 
+   Django_ 
    installation in the isolated Python environment.
 
+.. _virtualenv: https://virtualenv.pypa.io/
+.. _Django: https://www.djangoproject.com/
 
 Preparing an isolated Python instance using virtualenv
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -87,7 +89,7 @@ Installing Django
 ^^^^^^^^^^^^^^^^^
 
 I recommend using an installation of 
-Django:https://www.djangoproject.com/ 
+Django_ 
 managed by virtualenv that can't be messed up by other users (or yourself) 
 working elsewhere on the machine. 
 
