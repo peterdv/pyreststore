@@ -101,6 +101,7 @@ You can confirm this by doing::
 
   (pyreststoreEnv)$ which django-admin.py
 
-Which should report an area under our ``pyreststoreEnv`` directory.
+Which should report an area under our ``pyreststoreEnv`` directory
+(which is already excluded from this git repository, remember ?).
 
 .. EOF
