@@ -133,7 +133,7 @@ You should see ``(pyreststoreEnv)$`` at Your prompt,
 letting you know that you're running under the 
 virtualenv install. At any time, just type::
 
-  $ deactivate
+  (pyreststoreEnv)$ deactivate
 
 to stop using virtualenv, 
 returning to the default operating system Python instance.
