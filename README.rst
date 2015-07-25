@@ -77,7 +77,7 @@ Preparing a working development directory
 -----------------------------------------
 
 This git repository only contains the appliction code, a number of 
-supporting modules are need to do any usefull work.
+supporting modules are needed to do any usefull work.
 
 To do any development or production I recommend that you use:
 
