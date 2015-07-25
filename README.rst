@@ -49,7 +49,9 @@ in our systems landscape,
 and at the same time it is a personal learning experience for me.
 The implementation is inspired of my starting points learning about 
 Django and Rest: The excelent `Django REST framwork Tutorial`_
-and `Django Tutorial`_.
+and `Django Tutorial`_, 
+without those I would not have embarked on this journey. 
+
 
 .. _`Django REST framwork Tutorial`: http://tomchristie.github.io/django-rest-framework/#tutorial
 .. _`Django Tutorial`: https://docs.djangoproject.com/en/1.8/intro/tutorial01/
