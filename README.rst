@@ -59,7 +59,7 @@ specifically for the two purposes stated above.
 You should carefully consider which support level You need, 
 adopting this code implies that You will maintain the code yourself !
 We have a single enterprise deployment of a slightly adapted version of 
-pyrestore, but we do not have ressources to support pyrestore in general.
+pyreststore, but we do not have ressources to support pyreststore in general.
 
 If You decide to go ahead, please read the ``LICENSE`` file, 
 it should be wide enough to fit most purposes.
