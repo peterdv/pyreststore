@@ -60,6 +60,8 @@ If You consider using this code, please remember that it was implemented
 specifically for the two purposes stated above. 
 You should carefully consider which support level You need, 
 adopting this code implies that You will maintain the code yourself !
+If You are capable and willing to do this, please dig in - and consider 
+contributing here.
 We have a single enterprise deployment of a slightly adapted version of 
 pyreststore, but we do not have ressources to support pyreststore in general.
 
