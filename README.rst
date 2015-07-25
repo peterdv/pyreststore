@@ -44,7 +44,7 @@ This, in combination with a summer vacation cumming up,
 made the decission to roll my own - 
 and dig into Django along the way - an easy decission.
 
-So pyrestore solves is used to fill a very specic need we had 
+So pyreststore solves is used to fill a very specic need we had 
 in our systems landscape, 
 and at the same time it is a personal learning experience for me.
 The implementation is inspired of my starting points learning about 
