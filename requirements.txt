@@ -7,4 +7,4 @@ djangorestframework-jwt==1.4.0
 django-rest-swagger==0.3.3
 Pygments==2.0.2
 Markdown==2.6.2
-selenium=2.46.1
+selenium==2.46.1
