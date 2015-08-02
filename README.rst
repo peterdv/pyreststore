@@ -1,5 +1,5 @@
 .. -*- coding: utf-8; mode: rst; -*-
-.. pyreststore
+.. Pyreststore introduction https://github.com/peterdv/pyreststore
 
 .. To be able to generate PDF files, install the texlive-latex-extra package
 
@@ -13,8 +13,8 @@
     • ", for paragraphs
 
 
-README
-======
+Pyreststore introduction
+========================
 
 .. Bibliographic fields:
 
@@ -38,7 +38,8 @@ This is a varation of the `pastebin type`_ web applications implemented in
 
 Plenty of fine pastebin applications exist, so why create yet another one ?
 The answer is quite simply: because I could.
-Professionally I found myself in need of an enterprise level pastebin service, 
+Professionally I found myself in need of an 
+enterprise level, internal pastebin service, 
 and none of the existing ones I considered did quite fit the bill. 
 This, in combination with a summer vacation cumming up, 
 made the decission to roll my own - 
@@ -52,7 +53,6 @@ Django and Rest: The excelent `Django REST framwork Tutorial`_
 and `Django Tutorial`_, 
 without those I would not have embarked on this journey. 
 
-
 .. _`Django REST framwork Tutorial`: http://tomchristie.github.io/django-rest-framework/#tutorial
 .. _`Django Tutorial`: https://docs.djangoproject.com/en/1.8/intro/tutorial01/
 
@@ -63,7 +63,7 @@ adopting this code implies that You will maintain the code yourself !
 If You are capable and willing to do this, please dig in - and consider 
 contributing here.
 We have a single enterprise deployment of a slightly adapted version of 
-pyreststore, but we do not have ressources to support pyreststore in general.
+pyreststore, but I do not have ressources to support pyreststore in general.
 
 If You decide to go ahead, please read the ``LICENSE`` file, 
 it should be wide enough to fit most purposes.
@@ -74,105 +74,6 @@ I sincerely hope that You have as much fun as I have had !
 
 .. _`Peter Dahl Vestergaard`: https://dk.linkedin.com/in/peterdahlvestergaard
 
-
-Preparing a working development directory
------------------------------------------
-
-This git repository only contains the appliction code, a number of 
-supporting modules are needed to do any usefull work.
-
-To do any development or production I recommend that you use:
-
-#. An isolated Python environment based on 
-   `virtualenv`_. 
-
-#. A local `Django`_ installation 
-   in the isolated Python environment.
-
-#. A number of Python packages as documented in ``requirements.txt``.
-
-.. _`virtualenv`: https://virtualenv.pypa.io/
-
-
-Preparing an isolated Python instance using virtualenv
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-
-One common problem with installing packages directly to your 
-current site-packages area is that, 
-you both often have more than one project 
-and often use Python on your machine for things other than Django. 
-In either of these cases, you may run into dependency issues between your 
-applications and the installed packages. 
-For this reason, I am using virtualenv to manage 
-an isolated Python installation, containing a local Django installation. 
-This is common, and recommended, practice among Python and Django users.
-
-After installing virtualenv in the operating system in whatever way you want, 
-create a new isolated Python instance 
-in the root directory of this repository, 
-called ``pyreststoreEnv`` (named after the repository), 
-using the following::
-
-  $ virtualenv pyreststoreEnv
-
-This creates a new subdirectory ``./pyreststoreEnv`` containing 
-the isolated Python instance.
-
-As You may be on a different operating system and/or 
-a different Python version, 
-this directory is excluded from the git repository - by listing it
-in the ``.gitignore`` file, 
-also located in the root directory of this repository.
-
-Prior to performing anything, we need to *activate* the 
-isolated Python instance by::
-
-  $ source ./pyreststoreEnv/bin/activate
-
-This sets up various environment variables 
-to effectively bypass the system's Python install 
-and uses the local pyreststoreEnv one instead.
- 
-You should see ``(pyreststoreEnv)$`` at Your prompt, 
-letting you know that you're running under the 
-virtualenv install. At any time, just type::
-
-  (pyreststoreEnv)$ deactivate
-
-to stop using virtualenv, 
-returning to the default operating system Python instance.
-
-
-Installing Django
-^^^^^^^^^^^^^^^^^
-
-I recommend using an installation of `Django`_ 
-managed by virtualenv that can't be messed up by other users (or yourself) 
-working elsewhere on the machine. 
-
-To install Django under virtualenv, just type::
-
-  (pyreststoreEnv)$ pip install django
-
-This should give you the latest version of Django 
-which will be installed in your virtualenv area. 
-You can confirm this by doing::
-
-  (pyreststoreEnv)$ which django-admin.py
-
-Which should report an area under our ``pyreststoreEnv`` directory
-(which is already excluded from this git repository, remember ?).
-
-Python package requirements
-^^^^^^^^^^^^^^^^^^^^^^^^^^^
-
-The python package requirements are documented in ``./requirements.txt``.
-To install the required Python packages using `pip`_, simply run::
-
-  (pyreststoreEnv)$ pip install -r requirements.txt
-
-This will also give You the Django installation described above.
-
-.. _`pip`: https://pip.pypa.io/
+.. include:: doc/installation.rst
 
 .. EOF

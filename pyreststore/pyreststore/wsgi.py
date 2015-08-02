@@ -8,9 +8,9 @@ https://docs.djangoproject.com/en/1.8/howto/deployment/wsgi/
 """
 
 import os
-
 from django.core.wsgi import get_wsgi_application
 
+os.environ.setdefault("DJANGO_SETTINGS_MODULE", "tutorial.settings")
 os.environ.setdefault("DJANGO_SETTINGS_MODULE", "pyreststore.settings")
 
 application = get_wsgi_application()
