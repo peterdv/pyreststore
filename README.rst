@@ -16,13 +16,8 @@
 Pyreststore introduction
 ========================
 
-.. Bibliographic fields:
-
-:Authors: Peter Dahl Vestergaard
-:Status: Work In Progress.
-:Version: 0.01.001
-:Date: 20150725
-
+.. image:: https://travis-ci.org/peterdv/pyreststore.svg?branch=master
+    :target: https://travis-ci.org/peterdv/pyreststore
 
 `Pyreststore`_ is a `Python`_ implementation of a `REST`_ based storage, 
 a web application capable of storing bitbuckets serialized as plain text. 
