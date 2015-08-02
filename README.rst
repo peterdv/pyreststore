@@ -60,11 +60,11 @@ contributing here.
 We have a single enterprise deployment of a slightly adapted version of 
 pyreststore, but I do not have ressources to support pyreststore in general.
 
-If You decide to go ahead, please read the `LICENSE`_ file, 
+If You decide to go ahead, please read the `License`_ file, 
 it should be wide enough to fit most purposes, 
 and consult the `installation`_ notes.
 
-.. _`LICENCE`: LICENCE
+.. _`License`: ./LICENSE
 .. _`installation`: doc/installation.rst
 
 I sincerely hope that You have as much fun as I have had !
