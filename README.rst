@@ -12,12 +12,14 @@
     • ^, for subsubsections
     • ", for paragraphs
 
+.. image:: https://travis-ci.org/peterdv/pyreststore.svg?branch=master
+    :target: https://travis-ci.org/peterdv/pyreststore
+.. image:: https://img.shields.io/pypi/v/pyreststore.svg
+    :target: https://pypi.python.org/pypi/pyreststore
+
 
 Pyreststore introduction
 ========================
-
-.. image:: https://travis-ci.org/peterdv/pyreststore.svg?branch=master
-    :target: https://travis-ci.org/peterdv/pyreststore
 
 `Pyreststore`_ is a `Python`_ implementation of a `REST`_ based storage, 
 a web application capable of storing bitbuckets serialized as plain text. 
