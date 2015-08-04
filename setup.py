@@ -64,6 +64,8 @@ setup(
                       'django-rest-swagger',
                       'django-filter',
                   ],
+    test_suite = "tests.runtests.runtests",
+
     # metadata for upload to PyPI
     zip_safe=False,
     author = metadata['author'],
