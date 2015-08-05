@@ -52,10 +52,14 @@ MIDDLEWARE_CLASSES = (
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
-    'django.contrib.auth.middleware.SessionAuthenticationMiddleware',
+    # Seems to break py27-django16
+    # New in Django 1.7:
+    # 'django.contrib.auth.middleware.SessionAuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
-    'django.middleware.security.SecurityMiddleware',
+    # Seems to break py27-django17
+    # New in Django 1.8:
+    # 'django.middleware.security.SecurityMiddleware',
 )
 
 ROOT_URLCONF = 'pyreststore.urls'

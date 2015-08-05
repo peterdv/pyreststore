@@ -5,7 +5,7 @@
 #
 # Usage:
 #   python setup.py test
-#   python pyreststore/tests/runtests.py 
+#   python pyreststore/tests/runtests.py
 #   python pyreststore/tests/runtests.py tests
 #   python pyreststore/tests/runtests.py test_pep8
 #   python pyreststore/tests/runtests.py test_bckt.test_bckt_views
@@ -27,13 +27,14 @@ sys.path.insert(0, here)
 
 os.environ['DJANGO_SETTINGS_MODULE'] = 'pyreststore.settings'
 
+
 def runtests(*test_args):
     from django_nose import NoseTestSuiteRunner
 
     if not test_args:
         test_args = ['tests']
 
-    #test_runner = get_runner(settings)
+    # test_runner = get_runner(settings)
     test_runner = NoseTestSuiteRunner(verbosity=2, interactive=True)
     failures = test_runner.run_tests(test_args)
     sys.exit(failures)
