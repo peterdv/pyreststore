@@ -3,6 +3,8 @@ from __future__ import unicode_literals
 
 import logging
 import json
+import django
+from distutils.version import StrictVersion
 from rest_framework import status
 from rest_framework.reverse import reverse
 from tests.baseTestCase import BaseTestCaseJWT
@@ -33,9 +35,13 @@ class BcktViewsTest(BaseTestCaseJWT):
         response = self.client.get(url)
 
         self.assertEqual(response.status_code, status.HTTP_200_OK)
-        self.assertEqual(response.resolver_match.func.__name__,
-                         'BcktViewSet')
-        self.assertEqual(response.charset, 'utf-8')
+        if 'resolver_match' in dir(response):
+            self.assertEqual(response.resolver_match.func.__name__,
+                             'BcktViewSet')
+        if (django.VERSION >= (1, 8)):
+            self.assertEqual(response.charset, 'utf-8')
+        else:
+            print('New in Django 1.8: response.charset')
         self.assertEqual(response['Content-Type'], 'application/json')
         self.assertIn('GET', response['Allow'])
         self.assertIn('POST', response['Allow'])
@@ -65,8 +71,9 @@ class BcktViewsTest(BaseTestCaseJWT):
         )
 
         self.assertEqual(response.status_code, status.HTTP_201_CREATED)
-        self.assertEqual(response.resolver_match.func.__name__,
-                         'BcktViewSet')
+        if 'resolver_match' in dir(response):
+            self.assertEqual(response.resolver_match.func.__name__,
+                             'BcktViewSet')
 
         response = self.api_client.post(url, data_1, format='json')
         self.responseToDebugLog(
@@ -75,8 +82,9 @@ class BcktViewsTest(BaseTestCaseJWT):
         )
 
         self.assertEqual(response.status_code, status.HTTP_201_CREATED)
-        self.assertEqual(response.resolver_match.func.__name__,
-                         'BcktViewSet')
+        if 'resolver_match' in dir(response):
+            self.assertEqual(response.resolver_match.func.__name__,
+                             'BcktViewSet')
 
         # Get the current Bckt instances in the database
         bckts = Bckt.objects.all()
