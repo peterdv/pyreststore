@@ -5,7 +5,7 @@ __title__ = 'Python implementation of a REST based storage'
 
 # Please use PEP 0440 version strings.
 # https://www.python.org/dev/peps/pep-0440/
-__version__ = '0.9.0'
+__version__ = '0.9.1.dev1'
 __author__ = 'Peter Dahl Vestergaard'
 __license__ = 'BSD 3-Clause'
 __copyright__ = 'Copyright 2015 Peter Dahl Vestergaard'
