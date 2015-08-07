@@ -8,3 +8,8 @@ install:
 script: 
   - cd pyreststore
   - python manage.py test
+# whitelist
+branches:
+  only:
+    - master
+    - develop
