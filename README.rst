@@ -18,8 +18,8 @@
     :target: https://pypi.python.org/pypi/pyreststore
 
 
-Pyreststore introduction
-========================
+Python implementation of a REST based storage
+=============================================
 
 `Pyreststore`_ is a `Python`_ implementation of a `REST`_ based storage, 
 a web application capable of storing bitbuckets serialized as plain text. 
@@ -32,6 +32,39 @@ This is a varation of the `pastebin type`_ web applications implemented in
 .. _`pastebin type`: https://en.wikipedia.org/wiki/Pastebin
 .. _`Django`: https://www.djangoproject.com/
 .. _`Django REST framework`: http://tomchristie.github.io/django-rest-framework/
+
+
+Requirements
+------------
+
+* `Python`_ (2.7)
+* `Django`_ (1.7, 1.8)
+* `Django REST framework`_ (2.3.8+)
+* `REST framework JWT Auth`_ (1.6)
+
+.. _`REST framework JWT Auth`: https://github.com/GetBlimp/django-rest-framework-jwt
+
+And the requirements inherited from these packages.
+
+The distributed version pulls a number of optional packages 
+such as for example
+`swagger`_ (online inspection and documention of the api). 
+These can be disabled by modifying the configuration 
+and the calls in the code.
+
+.. _`swagger`: https://github.com/marcgibbons/django-rest-swagger
+
+
+Bugs & Contributions
+--------------------
+
+Please report bugs by opening an issue on github.
+
+Contributions are welcome !
+
+
+Background
+----------
 
 Plenty of fine pastebin applications exist, so why create yet another one ?
 The answer is quite simply: because I could.
@@ -62,9 +95,9 @@ contributing here.
 We have a single enterprise deployment of a slightly adapted version of 
 pyreststore, but I do not have ressources to support pyreststore in general.
 
-If You decide to go ahead, please read the `License`_ file, 
+If You decide to go ahead, please read the `License` file, 
 it should be wide enough to fit most purposes, 
-and consult the `installation`_ notes.
+and consult the `installation` notes.
 
 .. _`License`: ./LICENSE
 .. _`installation`: doc/installation.rst
@@ -75,6 +108,5 @@ I sincerely hope that You have as much fun as I have had !
 
 .. _`Peter Dahl Vestergaard`: https://dk.linkedin.com/in/peterdahlvestergaard
 
-.. include:: doc/installation.rst
 
 .. EOF

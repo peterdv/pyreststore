@@ -22,7 +22,7 @@ supporting modules are needed to do any usefull work.
 
 To do any development or production I recommend that you use the following 
 procedure, which will enable You to contribute,
-should You decide to do so::
+should You decide to do so:
 
 #. Fork the `pyreststore repository on GitHub`_.
 
@@ -31,7 +31,7 @@ should You decide to do so::
      $ git clone https://github.com/<your_username>/pyreststore.git
      $ cd pyreststore
 
-#. `Prepare an isolated Python instance using virtualenv`_,
+#. `Prepare an isolated Python instance using virtualenv and virtualenvwrapper`_,
    and activate it.
 
 #. `Install the Python package requirements`_  
@@ -56,7 +56,7 @@ I know, there are a lot of directories called ``pyreststore``, including
 the git repository itself - sorry ! I shall try to be very explicit when
 referring to them:
  
-- The git ``pyreststore`` directory itself on your disc
+- The git repository ``pyreststore`` directory itself
   (containing the ``README.rst`` file 
   and the ``pyreststoreEnv`` directory) 
   is referred to as ``./``. 
@@ -73,8 +73,8 @@ referring to them:
   as ``./pyreststore/pyreststore``.
 
 
-Prepare an isolated Python instance using virtualenv
-----------------------------------------------------
+Prepare an isolated Python instance using virtualenv and virtualenvwrapper
+--------------------------------------------------------------------------
 
 One common problem with installing packages directly to your 
 current site-packages area is that, 
@@ -86,33 +86,38 @@ For this reason, I am using `virtualenv`_ to manage
 an isolated Python installation, containing a local Django installation. 
 This is common, and recommended, practice among Python and Django users.
 
-.. _`virtualenv`: https://virtualenv.pypa.io/
+`virtualenvwrapper`_ is a tool making it a lot easier to handle multiple
+isolated Python installations.
 
-After installing virtualenv in the operating system in whatever way you want, 
-create a new isolated Python instance 
-in the root directory of this repository, 
+.. _`virtualenv`: https://virtualenv.pypa.io/
+.. _`virtualenvwrapper`: https://bitbucket.org/dhellmann/virtualenvwrapper/
+
+After installing ``virtualenvwrapper``
+(which installs ``virtualenv`` as a depenency) 
+in the operating system in whatever way you want, 
+You need to add a line to Your ``.bashrc`` file::
+
+  echo "source /usr/local/bin/virtualenvwrapper.sh" >> ~/.bashrc
+
+This adds a number of commands to Your shell
+(remember to ``source`` Your ``.bashrc`` file to make them available
+the first time).
+
+
+Create a new isolated Python instance 
 called ``pyreststoreEnv`` (named after the repository), 
 using the following::
 
-  $ virtualenv pyreststoreEnv
+  $ mkvirtualenv pyreststoreEnv
 
-This creates a new subdirectory ``./pyreststoreEnv`` containing 
+This creates a new subdirectory ``~/pyreststoreEnv`` containing 
 the isolated Python instance.
-
-As You may be on a different operating system and/or 
-a different Python version, 
-this directory is excluded from the git repository - by listing it
-in the ``.gitignore`` file, 
-also located in the root directory of this repository.
-
-Prior to performing anything, we need to *activate* the 
-isolated Python instance by::
-
-  $ source ./pyreststoreEnv/bin/activate
-
-This sets up various environment variables 
+In effect, it sets up various environment variables 
 to effectively bypass the system's Python install 
 and uses the local pyreststoreEnv one instead.
+So anything installed via 
+``pip install`` is installed to the ``site-packages`` 
+of your ``virtualenv``. 
  
 You should see ``(pyreststoreEnv)$`` at Your prompt, 
 letting you know that you're running under the 
@@ -123,13 +128,20 @@ virtualenv install. At any time, just type::
 to stop using virtualenv, 
 returning to the default operating system Python instance.
 
+To resume using virtualenv, **activate** the 
+isolated Python instance by::
+
+  $ workon pyreststoreEnv
+
 
 Installing Django
 -----------------
 
 I recommend using an installation of `Django`_ 
 managed by virtualenv that can't be messed up by other users (or yourself) 
-working elsewhere on the machine. 
+working elsewhere on the machine.
+
+.. _`Django`: https://www.djangoproject.com/
 
 To install Django under virtualenv, just type::
 
@@ -141,8 +153,7 @@ You can confirm this by doing::
 
   (pyreststoreEnv)$ which django-admin.py
 
-Which should report an area under our ``pyreststoreEnv`` directory
-(which is already excluded from this git repository, remember ?).
+Which should report an area under our ``pyreststoreEnv`` directory.
 
 
 Install the Python package requirements

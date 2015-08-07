@@ -1,7 +1,8 @@
 # -*- coding: utf-8; mode: Python; -*-
 from __future__ import unicode_literals
 
-__title__ = 'Python implementation of a REST based storage'
+__project__ = 'pyreststore'
+__title__ = 'Python implementation of a REST based storage.'
 
 # Please use PEP 0440 version strings.
 # https://www.python.org/dev/peps/pep-0440/

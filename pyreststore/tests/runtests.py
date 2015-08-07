@@ -1,16 +1,8 @@
 #!/usr/bin/env python
 # -*- coding: utf-8; mode: Python; -*-
-
-# This file mainly exists to allow python setup.py test to work.
-#
-# Usage:
-#   python setup.py test
-#   python pyreststore/tests/runtests.py
-#   python pyreststore/tests/runtests.py tests
-#   python pyreststore/tests/runtests.py test_pep8
-#   python pyreststore/tests/runtests.py test_bckt.test_bckt_views
-
 from __future__ import unicode_literals
+
+
 
 import os
 import sys
@@ -29,6 +21,42 @@ os.environ['DJANGO_SETTINGS_MODULE'] = 'pyreststore.settings'
 
 
 def runtests(*test_args):
+    """Run the tests defined in this project.
+ 
+    This file mainly exists to allow ``python setup.py test`` to work.
+    :func:`runtests` can be ivoked from any curent working directory.
+
+    Args:
+
+        test_args:
+            Arguments passed to the Nose testrunner.
+
+    Usage:
+    
+        Run all the tests::
+        
+            python pyreststore/tests/runtests.py
+            
+        This is equivalent to::
+
+            python pyreststore/tests/runtests.py tests
+
+        Run tests for `PEP 0008`_ conformance of the source code::
+
+            python pyreststore/tests/runtests.py test_pep8
+
+        Only run the tests in the :mod:`tests.test_bckt.test_bckt_views` module::
+
+            python pyreststore/tests/runtests.py test_bckt_views
+            python pyreststore/tests/runtests.py test_bckt.test_bckt_views
+            python pyreststore/tests/runtests.py tests.test_bckt.test_bckt_views
+            pyreststore/tests/runtests.py test_bckt_views
+
+        all four forms are equivalent, 
+        the last one requires the file ``runtests.py`` to be executable by Your user. 
+
+    .. _`PEP 0008`: https://www.python.org/dev/peps/pep-0008/
+    """
     from django_nose import NoseTestSuiteRunner
 
     if not test_args:
