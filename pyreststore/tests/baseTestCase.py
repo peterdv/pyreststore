@@ -21,18 +21,18 @@ class BaseTestCaseJWT(TestCase):
     individual testcases.
 
     Attributes:
-    
-        `api_client` (:class:`rest_framework.test.APIClient`): 
-            Client to use in tests. 
-            Should not be modified directly.    
 
-        `testuserdata` (dict): 
+        `api_client` (:class:`rest_framework.test.APIClient`):
+            Client to use in tests.
+            Should not be modified directly.
+
+        `testuserdata` (dict):
             Definition of the tesuser.
 
-        `testUser` (:class:`django.contrib.auth.models.User`): 
+        `testUser` (:class:`django.contrib.auth.models.User`):
             The testuser created based on `testuserdata`.
 
-        `data` (dict): 
+        `data` (dict):
             Data usefull for authenticating testUser.
     """
 
@@ -90,7 +90,7 @@ class BaseTestCaseJWT(TestCase):
         store it in :attr:`testuserdata['jwtToken']`,
         and setup the method :meth:`api_client()` of this instance
         to authenticate using this JWT token.
-        
+
         Returns:
             The HTTP status code.
         """
@@ -121,14 +121,14 @@ class BaseTestCaseJWT(TestCase):
         Logs seleced information from the resonse object.
 
         Args:
-            
-            resp (:class:`rest_framework.response.Response`): 
+
+            resp (:class:`rest_framework.response.Response`):
                 The response object to log information from.
 
-            disp (bool): 
+            disp (bool):
                 If `True`, also print log information.
 
-            log (:class:`loggig.Logger`): 
+            log (:class:`loggig.Logger`):
                 Logger to use, defaults to a local logger.
         """
 
