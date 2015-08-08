@@ -1,0 +1,2 @@
+# MkDocs to build our documentation.
+Sphinx==1.3.1

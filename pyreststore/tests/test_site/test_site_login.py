@@ -24,8 +24,9 @@ class SiteLoginTest(TestCase):
         "Site login: GET login dialog (statuscode, function and Content-Type)"
 
         url = reverse('admin:login')
-        logger.debug('reverse(\'admin:login\')  = %s' % url)
+        logger.debug('Login url reverse(\'admin:login\')  = %s' % url)
         response = self.client.get(url)
         self.assertEqual(response.status_code, 200)
-        self.assertEqual(response.resolver_match.func.__name__, 'login')
+        if 'resolver_match' in dir(response):
+            self.assertEqual(response.resolver_match.func.__name__, 'login')
         self.assertEqual(response['Content-Type'], 'text/html; charset=utf-8')
